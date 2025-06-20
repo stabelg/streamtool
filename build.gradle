@@ -1,10 +1,12 @@
 plugins {
 	id 'java'
 	id 'war'
+	id 'application'
 	id 'org.springframework.boot' version '3.5.0'
 	id 'io.spring.dependency-management' version '1.1.7'
 }
 
+mainClassName = 'com.fabestonia.streamtool.streamtool.StreamtoolApplication'
 group = 'com.fabestonia.streamtool'
 version = '0.0.1-SNAPSHOT'
 
