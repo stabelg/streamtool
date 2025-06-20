@@ -1,5 +1,5 @@
 [build]
-builder = "gcr.io/buildpacks/builder:v1"
+builder = "gcr.io/buildpacks/builder:latest"
 
 [[build.env]]
 name =  "GOOGLE_RUNTIME_VERSION"
