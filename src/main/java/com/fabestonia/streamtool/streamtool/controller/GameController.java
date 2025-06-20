@@ -19,8 +19,8 @@ public class GameController {
     }
 
     @PostMapping("/text/{key}")
-    public void setText(@PathVariable String key, @RequestBody String novoValor) {
-        System.out.println(novoValor);
-        gameService.setText(key, novoValor);
+    public void setText(@PathVariable String key, @RequestBody String newValue) {
+        System.out.println(newValue);
+        gameService.setText(key, newValue);
     }
 }

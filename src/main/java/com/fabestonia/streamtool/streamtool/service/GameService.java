@@ -13,8 +13,8 @@ public class GameService {
     private final Map<String, String> texts = new ConcurrentHashMap<>();
     private final List<BiConsumer<String, String>> listeners = new ArrayList<>();
 
-    public String getText(String chave) {
-        return texts.getOrDefault(chave, "0");
+    public String getText(String key) {
+        return texts.getOrDefault(key, "0");
     }
 
     public void setText(String key, String newValue) {
