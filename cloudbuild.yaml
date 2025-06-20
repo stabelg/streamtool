@@ -1,0 +1,11 @@
+steps:
+  - name: 'gcr.io/buildpacks/builder'
+    entrypoint: 'bash'
+    args:
+      - -c
+      - |
+        ./gradlew clean bootJar
+        cp build/libs/app.jar $OUTPUT_PATH
+
+images:
+  - 'gcr.io/$PROJECT_ID/streamtool'
