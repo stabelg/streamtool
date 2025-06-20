@@ -7,7 +7,7 @@
         const params = new URLSearchParams(window.location.search);
         const chave = params.get("chave") || "padrao";
 
-        const socket = new WebSocket("ws://" + location.host + "/ws/text/" + chave);
+        const socket = new WebSocket("wss://" + location.host + "/ws/text/" + chave);
 
         socket.onmessage = function (event) {
             document.getElementById("texto").textContent = event.data;
@@ -25,8 +25,5 @@
 </head>
 <body>
 <p id="texto">0</p>
-<script>
-    document.getElementById("chave").textContent = chave;
-</script>
 </body>
 </html>
