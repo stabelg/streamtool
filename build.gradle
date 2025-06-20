@@ -7,10 +7,6 @@ plugins {
 group = 'com.fabestonia.streamtool'
 version = '0.0.1-SNAPSHOT'
 
-bootJar {
-	archiveFileName = 'app.jar'
-}
-
 java {
 	toolchain {
 		languageVersion = JavaLanguageVersion.of(21)
@@ -30,8 +26,4 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
-}
-
-tasks.build {
-	dependsOn bootJar
 }
